@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spray Foam Insulation Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Spray Foam Insulation Calculator</h1>
+        
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Section Name</th>
+                        <th>Length</th>
+                        <th>Width</th>
+                        <th>Thickness</th>
+                        <th>Area</th>
+                        <th>Board Footage</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Table rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <button id="addSectionBtn">Add Section</button>
+
+        <div class="summary-section">
+            <h2>Summary</h2>
+            <p>Total Square Footage: <span id="totalSqFeet">0</span></p>
+            <p>Total Board Footage: <span id="totalBoardFeet">0</span></p>
+            <p>Sets Needed: <span id="setsNeeded">0</span></p>
+            <p>Material Cost: $<span id="materialCost">0.00</span></p>
+            <p>Labour Cost: $<span id="labourCost">0.00</span></p>
+            <p>Company Profit: $<span id="companyProfit">0.00</span></p>
+            <p>Quote Price: $<span id="quotePrice">0.00</span></p>
+        </div>
+
+        <div class="input-section">
+            <h2>Cost and Pricing</h2>
+            <label for="costPerBoardFt">Cost per Board Foot ($):</label>
+            <input type="number" id="costPerBoardFt" step="0.01" placeholder="Enter cost per board foot">
+
+            <label for="pricePerBoardFt">Price per Board Foot ($):</label>
+            <input type="number" id="pricePerBoardFt" step="0.01" placeholder="Enter price per board foot">
+
+            <label for="labourRate">Labour Rate ($ per hour):</label>
+            <input type="number" id="labourRate" step="0.01" placeholder="Enter labour rate per hour">
+
+            <label for="hoursExpected">Hours Expected:</label>
+            <input type="number" id="hoursExpected" step="0.01" placeholder="Enter hours expected">
+
+            <label for="miscCosts">Miscellaneous Costs ($):</label>
+            <input type="number" id="miscCosts" step="0.01" placeholder="Enter miscellaneous costs">
+        </div>
+
+        <button id="calculateBtn">Calculate</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
