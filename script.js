@@ -1,9 +1,16 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the table with one row
+    addSection();
 
-document.getElementById('addSectionBtn').addEventListener('click', addSection);
-document.getElementById('calculateBtn').addEventListener('click', calculateSummary);
+    // Attach event listeners
+    document.getElementById('addSectionBtn').addEventListener('click', addSection);
+    document.getElementById('calculateBtn').addEventListener('click', calculateSummary);
+});
 
 function addSection() {
     const tableBody = document.getElementById('tableBody');
+    const rowsCount = tableBody.getElementsByTagName('tr').length;
+
     const row = document.createElement('tr');
 
     row.innerHTML = `
@@ -16,6 +23,12 @@ function addSection() {
     `;
 
     tableBody.appendChild(row);
+
+    // Debug statement
+    console.log('New row added');
+
+    // Ensure event listeners are re-attached
+    attachInputListeners();
 }
 
 function calculateSummary() {
@@ -57,4 +70,13 @@ function calculateSummary() {
     document.getElementById('labourCost').textContent = labourCost.toFixed(2);
     document.getElementById('companyProfit').textContent = companyProfit.toFixed(2);
     document.getElementById('quotePrice').textContent = quotePrice.toFixed(2);
+}
+
+function attachInputListeners() {
+    // Function to attach listeners to dynamically added inputs
+    const inputs = document.querySelectorAll('.length, .width, .thickness');
+    
+    inputs.forEach(input => {
+        input.addEventListener('input', calculateSummary);
+    });
 }
