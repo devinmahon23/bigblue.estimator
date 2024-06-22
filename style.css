@@ -21,6 +21,10 @@ h1, h2 {
     color: #333;
 }
 
+.table-responsive {
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     margin-bottom: 20px;
@@ -40,10 +44,10 @@ th {
     background-color: #f2f2f2;
 }
 
-button, input[type="number"], input[type="text"] {
+.button-large {
     display: block;
-    width: calc(100% - 20px); /* Adjust width to account for padding */
-    padding: 10px;
+    width: 100%;
+    padding: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: #007BFF;
@@ -51,10 +55,10 @@ button, input[type="number"], input[type="text"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px; /* Adjust font size */
+    font-size: 18px; /* Larger font size for mobile */
 }
 
-button:hover {
+.button-large:hover {
     background-color: #0056b3;
 }
 
@@ -68,6 +72,18 @@ button:hover {
     font-weight: bold;
 }
 
+.input-section input[type="number"], .input-section input[type="text"] {
+    display: block;
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
 .summary-section {
     margin-top: 20px;
 }
@@ -77,17 +93,29 @@ button:hover {
     margin: 10px 0;
 }
 
-.table-responsive {
-    overflow-x: auto;
-}
-
 @media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
     th, td {
         padding: 6px; /* Adjust padding for smaller screens */
         font-size: 14px; /* Reduce font size for smaller screens */
     }
 
-    button, input[type="number"], input[type="text"] {
+    .button-large {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .input-section input[type="number"], .input-section input[type="text"] {
         font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    .input-section label {
+        margin-top: 15px;
+    }
+
+    .summary-section {
+        margin-top: 30px;
     }
 }
