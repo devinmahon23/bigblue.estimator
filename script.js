@@ -12,7 +12,6 @@ function addSection() {
     const rowsCount = tableBody.getElementsByTagName('tr').length;
 
     const row = document.createElement('tr');
-
     row.innerHTML = `
         <td><input type="text" class="sectionName" placeholder="Section Name"></td>
         <td><input type="number" class="length" step="0.01" placeholder="Length"></td>
@@ -23,9 +22,6 @@ function addSection() {
     `;
 
     tableBody.appendChild(row);
-
-    // Debug statement
-    console.log('New row added');
 
     // Ensure event listeners are re-attached
     attachInputListeners();
@@ -73,9 +69,7 @@ function calculateSummary() {
 }
 
 function attachInputListeners() {
-    // Function to attach listeners to dynamically added inputs
     const inputs = document.querySelectorAll('.length, .width, .thickness');
-    
     inputs.forEach(input => {
         input.addEventListener('input', calculateSummary);
     });
