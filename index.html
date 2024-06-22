@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spray Foam Insulation Calculator</title>
+    <title>Big Blue Estimator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Spray Foam Insulation Calculator</h1>
+        <h1>Big Blue Estimator</h1>
         
+        <div class="input-section">
+            <h2>Cost and Pricing</h2>
+            <label for="costPerBoardFt">Cost per Board Foot ($):</label>
+            <input type="number" id="costPerBoardFt" step="0.01" placeholder="Enter cost per board foot">
+
+            <label for="pricePerBoardFt">Price per Board Foot ($):</label>
+            <input type="number" id="pricePerBoardFt" step="0.01" placeholder="Enter price per board foot">
+
+            <label for="labourRate">Labour Rate ($ per hour):</label>
+            <input type="number" id="labourRate" step="0.01" placeholder="Enter labour rate per hour">
+
+            <label for="hoursExpected">Hours Expected:</label>
+            <input type="number" id="hoursExpected" step="0.01" placeholder="Enter hours expected">
+
+            <label for="miscCosts">Miscellaneous Costs ($):</label>
+            <input type="number" id="miscCosts" step="0.01" placeholder="Enter miscellaneous costs">
+
+            <button id="calculateBtn">Calculate</button>
+        </div>
+
         <div class="table-responsive">
             <table>
                 <thead>
@@ -40,26 +60,6 @@
             <p>Company Profit: $<span id="companyProfit">0.00</span></p>
             <p>Quote Price: $<span id="quotePrice">0.00</span></p>
         </div>
-
-        <div class="input-section">
-            <h2>Cost and Pricing</h2>
-            <label for="costPerBoardFt">Cost per Board Foot ($):</label>
-            <input type="number" id="costPerBoardFt" step="0.01" placeholder="Enter cost per board foot">
-
-            <label for="pricePerBoardFt">Price per Board Foot ($):</label>
-            <input type="number" id="pricePerBoardFt" step="0.01" placeholder="Enter price per board foot">
-
-            <label for="labourRate">Labour Rate ($ per hour):</label>
-            <input type="number" id="labourRate" step="0.01" placeholder="Enter labour rate per hour">
-
-            <label for="hoursExpected">Hours Expected:</label>
-            <input type="number" id="hoursExpected" step="0.01" placeholder="Enter hours expected">
-
-            <label for="miscCosts">Miscellaneous Costs ($):</label>
-            <input type="number" id="miscCosts" step="0.01" placeholder="Enter miscellaneous costs">
-        </div>
-
-        <button id="calculateBtn">Calculate</button>
     </div>
 
     <script src="script.js"></script>
