@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Blue Estimator</title>
+    <title>Spray Foam Insulation Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Big Blue Estimator</h1>
+        <h1>Spray Foam Insulation Calculator</h1>
         
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Section Name</th>
+                        <th>Length</th>
+                        <th>Width</th>
+                        <th>Thickness</th>
+                        <th>Area</th>
+                        <th>Board Footage</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td><input type="text" class="sectionName" placeholder="Section Name"></td>
+                        <td><input type="number" class="length" step="0.01" placeholder="Length"></td>
+                        <td><input type="number" class="width" step="0.01" placeholder="Width"></td>
+                        <td><input type="number" class="thickness" step="0.01" placeholder="Thickness"></td>
+                        <td class="area">0</td>
+                        <td class="boardFootage">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button id="addSectionBtn">Add Section</button>
+
         <div class="input-section">
             <h2>Cost and Pricing</h2>
             <label for="costPerBoardFt">Cost per Board Foot ($):</label>
@@ -26,29 +53,7 @@
 
             <label for="miscCosts">Miscellaneous Costs ($):</label>
             <input type="number" id="miscCosts" step="0.01" placeholder="Enter miscellaneous costs">
-
-            <button id="calculateBtn">Calculate</button>
         </div>
-
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Section Name</th>
-                        <th>Length</th>
-                        <th>Width</th>
-                        <th>Thickness</th>
-                        <th>Area</th>
-                        <th>Board Footage</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    <!-- Table rows will be dynamically added here -->
-                </tbody>
-            </table>
-        </div>
-
-        <button id="addSectionBtn">Add Section</button>
 
         <div class="summary-section">
             <h2>Summary</h2>
@@ -60,6 +65,8 @@
             <p>Company Profit: $<span id="companyProfit">0.00</span></p>
             <p>Quote Price: $<span id="quotePrice">0.00</span></p>
         </div>
+
+        <button id="calculateBtn">Calculate</button>
     </div>
 
     <script src="script.js"></script>
