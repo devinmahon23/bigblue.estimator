@@ -59,7 +59,7 @@ thead {
 }
 
 .input-section input {
-    width: 20px;
+    width: calc(33.33% - 20px); /* Adjusted to one-third of the available space */
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
