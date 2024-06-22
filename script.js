@@ -1,5 +1,11 @@
-document.getElementById('addSectionBtn').addEventListener('click', addSection);
-document.getElementById('calculateBtn').addEventListener('click', calculateSummary);
+document.addEventListener('DOMContentLoaded', function() {
+    // Prepopulate the first row in the table
+    addSection();
+
+    // Attach event listeners
+    document.getElementById('addSectionBtn').addEventListener('click', addSection);
+    document.getElementById('calculateBtn').addEventListener('click', calculateSummary);
+});
 
 function addSection() {
     const tableBody = document.getElementById('tableBody');
