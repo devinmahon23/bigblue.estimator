@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Prepopulate the first row in the table
+    // Initialize the table with one row
     addSection();
 
     // Attach event listeners
@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function addSection() {
     const tableBody = document.getElementById('tableBody');
+    const rowsCount = tableBody.getElementsByTagName('tr').length;
+
+    // Limit to one prepopulated row
+    if (rowsCount >= 1) {
+        return;
+    }
+
     const row = document.createElement('tr');
 
     row.innerHTML = `
