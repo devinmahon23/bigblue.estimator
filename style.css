@@ -1,121 +1,98 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Resetting default margin and padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-    width: 90%;
-    max-width: 600px; /* Adjust max-width as needed */
-    margin: auto;
-    overflow: hidden;
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
     padding: 20px;
-    background: #fff;
-    border-radius: 10px;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Heading styles */
 h1, h2 {
-    text-align: center;
     color: #333;
 }
 
+/* Table styling */
 .table-responsive {
     overflow-x: auto;
 }
 
 table {
     width: 100%;
-    margin-bottom: 20px;
     border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
+    margin-top: 20px;
 }
 
 th, td {
-    padding: 8px; /* Adjust padding for smaller text boxes */
+    padding: 10px;
     text-align: left;
 }
 
-th {
-    background-color: #f2f2f2;
+thead {
+    background-color: #f0f0f0;
 }
 
-.button-large {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px; /* Larger font size for mobile */
-}
-
-.button-large:hover {
-    background-color: #0056b3;
-}
-
+/* Input section styling */
 .input-section {
     margin-top: 20px;
 }
 
 .input-section label {
     display: block;
-    margin-top: 10px;
-    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.input-section input[type="number"], .input-section input[type="text"] {
-    display: block;
-    width: calc(100% - 20px); /* Adjust width to account for padding */
-    padding: 10px;
-    margin-top: 5px;
+.input-section input {
+    width: calc(33.33% - 20px); /* Adjusted to one-third of the available space */
+    padding: 8px;
     margin-bottom: 10px;
-    background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 4px;
 }
 
+/* Summary section styling */
 .summary-section {
     margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
 }
 
 .summary-section p {
-    font-size: 1.1em;
-    margin: 10px 0;
+    margin-bottom: 5px;
 }
 
-@media screen and (max-width: 600px) {
-    .container {
-        padding: 10px;
-    }
+.summary-section span {
+    font-weight: bold;
+}
 
-    th, td {
-        padding: 6px; /* Adjust padding for smaller screens */
-        font-size: 14px; /* Reduce font size for smaller screens */
-    }
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
 
-    .button-large {
-        font-size: 16px; /* Adjust font size for smaller screens */
-    }
-
-    .input-section input[type="number"], .input-section input[type="text"] {
-        font-size: 14px; /* Reduce font size for smaller screens */
-    }
-
-    .input-section label {
-        margin-top: 15px;
-    }
-
-    .summary-section {
-        margin-top: 30px;
-    }
+button:hover {
+    background-color: #0056b3;
 }
